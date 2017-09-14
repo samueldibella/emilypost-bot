@@ -42,8 +42,14 @@ keywords = open('index.txt').read().splitlines()
 text_model = markovify.Text(text, state_size=3)
 
 while(1):
-    keyword = random.choice(keywords)
-    tweetLength = 138 - len(keyword)
-    tweet = keyword.title() + ':\n' + make_short_sentence_with_start(text_model, keyword, tweetLength, min_chars=0)
+    choice = random.randint(0, 2)
+
+    if choice == 0:
+        keyword = random.choice(keywords)
+        tweetLength = 138 - len(keyword)
+        tweet = keyword.title() + ':\n' + make_short_sentence_with_start(text_model, keyword, tweetLength, min_chars=0)
+    else:
+        tweet = text_model.make_short_sentence(140)
+
     api.update_status(tweet)
     time.sleep(1800)
