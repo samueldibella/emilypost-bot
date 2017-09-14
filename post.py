@@ -21,7 +21,7 @@ api = tweepy.API(auth)
 with open("post_corpora.txt") as f:
     text = f.read()
 
-text_model = markovify.Text(text)
+text_model = markovify.Text(text, state_size=3)
 
 while(1):
     api.update_status(text_model.make_short_sentence(140))
