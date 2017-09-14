@@ -6,6 +6,7 @@ import tweepy
 import time
 import sys
 import markovify
+import nltk
 
 #argfile = str(sys.argv[1])
 
