@@ -1,4 +1,9 @@
 # emilypost-bot
+Automated etiquette advice
+
+Sources:
+https://dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/
+https://github.com/jsvine/markovify
 
 Corpora from Project Gutenburg:
 https://www.gutenberg.org/cache/epub/14314/pg14314.txt
