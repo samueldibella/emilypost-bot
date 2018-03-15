@@ -52,4 +52,5 @@ while(1):
         tweet = text_model.make_short_sentence(140)
 
     api.update_status(tweet)
-    time.sleep(1800)
+    # 12 hrs at a time
+    time.sleep(43200)
